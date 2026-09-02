@@ -41,6 +41,19 @@
 
   .proj-footer { padding: 40px 0 100px; border-top: 1px solid var(--line); margin-top: 40px; }
   .proj-footer a { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rust); }
+
+  .collateral-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+  .collateral-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.5px;
+    text-transform: uppercase; background: var(--rust); color: var(--paper) !important;
+    padding: 10px 16px; border-radius: 3px; text-decoration: none !important;
+  }
+  .collateral-btn:hover { background: var(--rust-deep); }
+  .collateral-btn.secondary {
+    background: transparent; color: var(--ink) !important; border: 1px solid var(--ink);
+  }
+  .collateral-btn.secondary:hover { border-color: var(--rust); color: var(--rust) !important; }
 </style>
 
 </head>
@@ -54,7 +67,7 @@
 
 <header class="proj-hero">
   <div class="wrap">
-    <span class="proj-tag">Research Paper</span>
+    <span class="proj-tag">Research Paper · Grad School Project</span>
     <h1>Libraries and Their Proposed Impact with Open Data</h1>
     <div class="proj-meta">
       <div>Context<span>Graduate coursework, M.S. Human-Computer Interaction</span></div>
@@ -70,6 +83,11 @@
 <p>A research paper examining the impact of public libraries in underrepresented communities, and how those libraries can leverage Open Data to better serve their constituents.</p>
 <h2>Focus Areas</h2>
 <p>The research explored the intersection of civic institutions and public data access — looking at how libraries, as trusted community touchpoints, are positioned to translate Open Data into meaningful services for the populations that need them most.</p>
+
+<h2>Project Collateral</h2>
+<div class="collateral-row">
+  <a class="collateral-btn" href="Richardson-Libraries-OpenData-Research.pdf" download>&darr; Read Full Research Paper (PDF)</a>
+</div>
   </div>
 </main>
 

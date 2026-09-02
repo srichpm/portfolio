@@ -41,6 +41,19 @@
 
   .proj-footer { padding: 40px 0 100px; border-top: 1px solid var(--line); margin-top: 40px; }
   .proj-footer a { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rust); }
+
+  .collateral-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+  .collateral-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.5px;
+    text-transform: uppercase; background: var(--rust); color: var(--paper) !important;
+    padding: 10px 16px; border-radius: 3px; text-decoration: none !important;
+  }
+  .collateral-btn:hover { background: var(--rust-deep); }
+  .collateral-btn.secondary {
+    background: transparent; color: var(--ink) !important; border: 1px solid var(--ink);
+  }
+  .collateral-btn.secondary:hover { border-color: var(--rust); color: var(--rust) !important; }
 </style>
 
 </head>
@@ -54,7 +67,7 @@
 
 <header class="proj-hero">
   <div class="wrap">
-    <span class="proj-tag">UX Research</span>
+    <span class="proj-tag">UX Research · Grad School Project</span>
     <h1>US Passport Services — Travel.gov</h1>
     <div class="proj-meta">
       <div>Context<span>Graduate coursework, M.S. Human-Computer Interaction</span></div>
@@ -72,6 +85,12 @@
 <p>Conducted user testing of the platform using mixed research methods to surface where the site was falling short for the people trying to use it — from navigation and findability to task completion around passport applications and renewals.</p>
 <h2>Outcome</h2>
 <p>Synthesized research findings into a set of proposed user experience and design changes aimed at addressing the platform's core usability weaknesses.</p>
+
+<h2>Project Collateral</h2>
+<div class="collateral-row">
+  <a class="collateral-btn" href="Richardson-Passport-Usability-Findings.pdf" download>&darr; Usability Findings (PDF)</a>
+  <a class="collateral-btn secondary" href="https://canva.link/epd3lga6lcucl16" target="_blank" rel="noopener">View Presentation &#8599;</a>
+</div>
   </div>
 </main>
 
