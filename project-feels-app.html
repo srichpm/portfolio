@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Feels App — S. Renay Richardson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #17140f;
+    --paper: #f6f1e7;
+    --paper-alt: #efe7d6;
+    --rust: #c1440e;
+    --rust-deep: #9c360b;
+    --olive: #5b6047;
+    --line: #d8cdb4;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--paper); color: var(--ink); font-family: 'Inter', sans-serif; line-height: 1.6; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 0 32px; }
+  nav { position: sticky; top: 0; z-index: 50; background: rgba(246,241,231,0.92); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
+  nav .wrap { display: flex; justify-content: space-between; align-items: center; height: 68px; max-width: 1180px; }
+  .nav-mark { font-family: 'Fraunces', serif; font-weight: 700; font-size: 20px; letter-spacing: -0.3px; }
+  .nav-mark a { color: var(--ink); text-decoration: none; }
+  .back-link { font-family: 'JetBrains Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--ink); text-decoration: none; opacity: 0.75; }
+  .back-link:hover { opacity: 1; color: var(--rust); }
+
+  .proj-hero { padding: 70px 0 40px; border-bottom: 1px solid var(--line); }
+  .proj-tag { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; background: var(--rust); color: var(--paper); display: inline-block; padding: 5px 12px; border-radius: 2px; margin-bottom: 20px; }
+  .proj-hero h1 { font-family: 'Fraunces', serif; font-weight: 700; font-size: clamp(34px, 6vw, 58px); line-height: 1.04; letter-spacing: -1px; margin-bottom: 20px; }
+  .proj-meta { display: flex; gap: 32px; flex-wrap: wrap; margin-top: 28px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--olive); }
+  .proj-meta div span { display: block; color: var(--ink); font-size: 13px; margin-top: 3px; font-family: 'Inter', sans-serif; font-weight: 600; }
+
+  .proj-body { padding: 56px 0; }
+  .proj-body h2 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 26px; margin: 40px 0 14px; letter-spacing: -0.3px; }
+  .proj-body h2:first-child { margin-top: 0; }
+  .proj-body p { font-size: 16.5px; color: #34302a; margin-bottom: 16px; max-width: 700px; }
+  .proj-body ul, .proj-body ol { margin: 0 0 16px 22px; max-width: 700px; }
+  .proj-body li { font-size: 16.5px; color: #34302a; margin-bottom: 8px; }
+  .proj-body li::marker { color: var(--rust); font-weight: 600; }
+  .proj-body li strong { color: var(--ink); }
+
+  .note-box {
+    background: var(--paper-alt);
+    border-left: 3px solid var(--rust);
+    padding: 18px 22px;
+    margin: 24px 0;
+    max-width: 700px;
+    border-radius: 2px;
+  }
+  .note-box p { margin-bottom: 0; font-size: 15px; }
+  .note-box p strong { color: var(--rust-deep); }
+
+  .stack-row { display: flex; gap: 10px; flex-wrap: wrap; margin: 16px 0 8px; }
+  .stack-pill {
+    font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.5px;
+    background: var(--paper-alt); color: var(--ink); border: 1px solid var(--line);
+    padding: 6px 14px; border-radius: 20px;
+  }
+
+  .proj-footer { padding: 40px 0 100px; border-top: 1px solid var(--line); margin-top: 40px; }
+  .proj-footer a { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rust); }
+
+  .collateral-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+  .collateral-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.5px;
+    text-transform: uppercase; background: var(--rust); color: var(--paper) !important;
+    padding: 10px 16px; border-radius: 3px; text-decoration: none !important;
+  }
+  .collateral-btn:hover { background: var(--rust-deep); }
+  .collateral-btn.secondary {
+    background: transparent; color: var(--ink) !important; border: 1px solid var(--ink);
+  }
+  .collateral-btn.secondary:hover { border-color: var(--rust); color: var(--rust) !important; }
+</style>
+
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <div class="nav-mark"><a href="index.html">S. RENAY RICHARDSON</a></div>
+    <a class="back-link" href="index.html#projects">&larr; Back to Portfolio</a>
+  </div>
+</nav>
+
+<header class="proj-hero">
+  <div class="wrap">
+    <span class="proj-tag">Independent Study · Web Development</span>
+    <h1>Feels App</h1>
+    <div class="proj-meta">
+      <div>Context<span>Self-directed independent project</span></div>
+      <div>Role<span>Solo Developer</span></div>
+      <div>Stack<span>React.js, Material UI, Spotify API</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="proj-body">
+  <div class="wrap">
+    <h2>Overview</h2>
+    <p>Feels App is a mood-based playlist generator I designed and built solo to sharpen my hands-on front-end development skills outside of client and coursework settings. Users describe how they're feeling and the app uses sentiment analysis to translate that mood into a custom Spotify playlist — one they can save directly to their own account.</p>
+    <p>Where my other portfolio projects showcase research, strategy, and product management, this project was about proving I can also design and build the interface myself — from component architecture to a live third-party API integration.</p>
+
+    <h2>How It Works</h2>
+    <p>The experience is built around a simple, guided selection flow:</p>
+    <ul>
+      <li><strong>Mood input</strong> — the user selects or describes their current mood as the starting point for the playlist.</li>
+      <li><strong>Refinement variables</strong> — additional inputs let the user fine-tune the result, including desired energy level and artist preferences.</li>
+      <li><strong>Sentiment analysis</strong> — the app processes these inputs to interpret the emotional tone being requested and map it to musical characteristics.</li>
+      <li><strong>Playlist generation</strong> — using the Spotify API, the app compiles a playlist matched to that sentiment and set of preferences.</li>
+      <li><strong>Save to Spotify</strong> — the user can save the generated playlist directly to their own Spotify account with a single action, so the result isn't just a preview, it's something they leave with.</li>
+    </ul>
+
+    <h2>Design & Development</h2>
+    <p>I built the interface in React.js with Material UI to keep the component system consistent and quick to iterate on, since this was a solo build with no design or engineering handoff. The focus was on making a multi-variable input flow (mood plus several refinement filters) feel lightweight and conversational rather than like a form.</p>
+    <div class="stack-row">
+      <span class="stack-pill">React.js</span>
+      <span class="stack-pill">Material UI</span>
+      <span class="stack-pill">Spotify Web API</span>
+      <span class="stack-pill">Sentiment Analysis</span>
+      <span class="stack-pill">OAuth (Spotify Account Save)</span>
+    </div>
+
+    <h2>A Note on the Live Demo</h2>
+    <div class="note-box">
+      <p><strong>Spotify has since deprecated the API endpoints this app relies on</strong>, so a live, working demo isn't available right now. This is a platform-side change outside my control rather than a reflection of the app's original functionality — at the time it was built, the full flow (mood input through sentiment analysis to saving a playlist to a user's Spotify account) worked end to end. I'm noting this transparently rather than leaving a broken link or an unexplained gap. Screenshots and a link to the code repository are on the way and will be added here.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="proj-footer">
+  <div class="wrap">
+    <a href="index.html#projects">&larr; Back to all projects</a>
+  </div>
+</footer>
+</body>
+</html>
